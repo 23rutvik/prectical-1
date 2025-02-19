@@ -1,0 +1,152 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* navbar */
+.navbar{
+    background-color: rgb(31, 110, 110);
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 20px 10px;
+    position:fixed;
+    z-index: 1000;
+    height: 60px;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+/* nav head */
+.navbar h1{
+    color: white;
+}
+/* list of navbar */
+.nav_list{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.nav_list a{
+    display: flex;
+    justify-content: start;
+    text-decoration: none;
+    color: white;
+}
+
+/* main */
+.main{
+   padding-top: 60px;
+}
+.main_section{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    font-size: medium;
+    background-color: rgb(214, 196, 209);
+    gap: 20px;
+}
+.main_section h3{
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    color:white;
+}
+.main_list{
+    list-style: none;
+    counter-reset: custom-counter;
+    padding-top: 10px;
+    list-style-position: inside;
+}
+.any{
+    background-color: rgb(19, 32, 32);
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    box-sizing: border-box;
+    box-shadow: 0 5px 4px black;
+}
+.any:hover{
+    transform: scale(0.95);
+}
+.iteam{
+    counter-increment: custom-counter;
+}
+.iteam::before {
+    content: counter(custom-counter)
+}
+/* dl list */
+.dl_list {
+    padding-top: 10px;
+    color: rgb(75, 5, 54);
+}
+.dt{
+    text-decoration: underline;
+}
+.dd{
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 5px 4px black;
+    color: white;
+    background-color:rgb(19, 32, 32);
+}
+.dd:hover{
+    transform: scale(0.95);
+}
+
+/* table styles */
+.table{
+    padding-bottom: 20px;
+}
+.table h2{
+    color:rgb(19, 32, 32) ;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: underline;
+    padding:20px 0;
+}
+.table_1 {
+    display: flex;
+    border-collapse: collapse;
+    justify-content: center;
+}
+th ,td ,tr{
+    border: 1px solid rgb(91, 43, 43);
+    border-collapse: collapse;
+}
+
+/* footer */
+
+.footer{
+    background-color:rgb(31, 110, 110);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: aliceblue;
+}
+
+@media screen and (max-width:769px){
+    body{
+        overflow-y: visible;
+    }
+    .navbar{
+        flex-direction: column;
+        height: fit-content;
+    }
+    .main{
+        padding-top:100px;
+        transition: all ease-out;
+    }
+    .main_section{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .table_1{
+        justify-content: center;
+        padding: 5px;
+    }
+}
